@@ -1,7 +1,9 @@
 header  {
-    color :rgba(0, 0, 0, 0.836);
+    color :rgb(34, 32, 33);
     font-size: 20px;
     text-align: center;
+    padding: 5px;
+    padding: rgb(224, 66, 85); 
 }
 button  {
     color: rgb(69, 202, 7);
@@ -13,7 +15,7 @@ button  {
 }
 .caja {
    
-background-color: rgba(235, 59, 59, 0.836);
+background-color: rgb(123, 54, 56);
 width: 1200px;
 height: 900px;
 padding: 10px solid rgba(63, 8, 8);
@@ -22,6 +24,9 @@ margin: 10px 100px 10px 100px ;
 
 }
 footer {
-margin: 1px 2px 1px 2px;    
+
+margin: 1px 2px 1px 2px color: rgb(224, 66, 85);  
+padding: 2px 1px 2px 1px color: rgb(224, 66, 85);
+border: solid 2px  rgb(252, 238, 221);  
 text-align: center;
 }
