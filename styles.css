@@ -18,7 +18,8 @@ header {
     margin: 30px auto;
 }
 
-.Lista-de-merienda {
+/* Corregido para que aplique directamente a la lista generada por JS */
+#ListMerienda ol {
     background-color: rgb(250, 252, 187);
     padding: 20px 30px;
     font-size: 1.2rem;
@@ -26,7 +27,8 @@ header {
     color: #333;
 }
 
-.Lista-de-merienda li {
+/* Corregido para que aplique a los elementos de esa lista */
+#ListMerienda li {
     margin-bottom: 15px;
 }
 
