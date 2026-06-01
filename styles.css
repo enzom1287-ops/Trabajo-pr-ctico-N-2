@@ -1,28 +1,37 @@
-header  {
-    color :rgb(161, 221, 112);
-    font-size: 20px;
+header {
+    color: rgb(255, 172, 54);
+    font-size: 28px;
     text-align: center;
-    padding: 5px;
-    padding: rgb(224, 66, 85); 
+    padding: 15px;
 }
-button  {
-    color: rgb(252, 238, 221);
-  width: 90px;
-  padding: 5px;
-  border: 3px solid #443535;
-  margin: 5px;
-  
-}
-.caja {
-   margin: 10px 350px;
-   width: 1200px;
-   height: 900px;
-   background-color: rgb(123, 54, 56);
-   padding: 10px solid rgba(63, 8, 8);
-}
-footer {
 
-margin: 1px 2px 1px 2px;  
-padding: 0%;  
-text-align: center;
+.caja {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    background-color: rgb(253, 63, 83);
+    padding: 20px;
+}
+
+#ListMerienda {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.Lista-de-merienda {
+    background-color: rgb(250, 252, 187);
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #333;
+}
+
+.Lista-de-merienda li {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 10px;
 }
