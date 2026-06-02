@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destacado</title>
-     <link rel="stylesheet" href="styles.css" />
+    <title>Peliculas</title>
+     <link rel="stylesheet" href="styles2.css" />
 </head>
 <body>
+   <link rel="stylesheet" href="styles2.css">
+
+
     <div class="caja">
-      <header>
-        <h1><ins><em>¡Tarjetas selecccionables!</em></ins></h1>
-    </header>
-    <br>
-    <nav>
-        <button>
-          <a href="index.html"> Index</a>
-        </button>
-    </nav>
-    
-    <br>
-    <footer>      <!--Firma de la pagina con un opyright con mi nombre -->
-        <p>© 2026 Derechos reservados de Index - Creado por <strong>ZOMER</strong></p>
-    </footer>
+        <header>
+            <h1><ins><em>¡Peliculas Destacadas!</em></ins></h1>
+        </header>
+        <hr>
+        <nav>
+           <button onclick="location.href='index.html'">Index</button>
+        </nav>
+
+        <div class="contenedor-principal">
+            <main id="contenedorTarjetas" class="grid-peliculas"></main>
+            
+            <aside class="lateral-derecho">
+                <div id="contenedorSelecciones"></div>
+            </aside>
+        </div>
+
+        <hr>
+        <footer>
+           <p>© 2026 Derechos reservados de Index - Creado por <strong>ZOMER</strong></p>
+        </footer>
+        <hr>
     </div>
+
+    <script src="Java2.js"></script>
 </body>
 </html>

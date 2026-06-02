@@ -1,3 +1,4 @@
+console.log("hola probando el JS")
 // 1. Definimos el arreglo de meriendas
 const meriendas = [    
     "Americano + Tostado",
