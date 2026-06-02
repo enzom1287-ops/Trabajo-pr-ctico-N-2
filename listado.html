@@ -1,30 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles2.css" />
 </head>
 <body>
     <div class="caja">
-      <header>
-        <h1><ins><em>¡Filtrado de elementos !</em></ins></h1>
-    </header>
+        <header>
+            <h1><ins><em>¡Filtrado de elementos!</em></ins></h1>
+        </header>
 
-    <br>
+        <br>
 
-    <nav>
-        <button>
-            <a href="index.html"> Index </a>
-        </button>
-    </nav>
+        <nav>
+            <button onclick="location.href='index.html'">Index</button>
+            <button onclick="location.href='destacado.html'">Destacado</button>
+        </nav>
 
-    <br>
-    
-    <footer>      <!--Firma de la pagina con un opyright con mi nombre -->
-        <p>© 2026 Derechos reservados de Index - Creado por <strong>ZOMER</strong></p>
-    </footer>    
+        <p class="subtitulo">Usa los botones para filtrar por categoría</p>
+
+        <div class="filtros">
+            <button id="btn-todos" class="activo" onclick="filtrar('todos')">Todos</button>
+            <button id="btn-manga" onclick="filtrar('manga')">Mangas</button>
+            <button id="btn-libro" onclick="filtrar('libro')">Libros</button>
+        </div>
+
+        <p id="contador-resultado"></p>
+
+        <div id="listado-libros"></div> 
+
+        <br>
+        <hr>
+        <footer>      <p>© 2026 Derechos reservados de Index - Creado por <strong>ZOMER</strong></p>
+        </footer>    
+        <hr>
     </div>
+
+    <script src="Java2.js"></script>
 </body>
 </html>

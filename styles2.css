@@ -1,17 +1,102 @@
+body {
+    background-color: rgb(253, 252, 220);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 header {
     color: rgb(255, 172, 54);
     font-size: 28px;
-    text-align: left; /* Alineado a la izquierda */
-    padding: 15px 0;
+    text-align: center;
+    padding: 15px;
 }
 
 .caja {
     margin: 20px auto;
-    width: 95%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 900px;
     background-color: rgb(253, 63, 83);
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav button {
+    background-color: rgb(253, 63, 83);
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border-radius: 4px;
+}
+
+nav button:hover {
+    background-color: rgb(200, 40, 60);
+}
+
+.subtitulo {
+    text-align: center;
+    color: rgb(250, 252, 187);
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.filtros {
+    text-align: center;
+    margin: 16px 0 10px;
+}
+
+.filtros button {
+    background-color: rgb(30, 80, 80);
+    color: rgb(253, 63, 83);
+    border: none;
+    padding: 12px 24px;
+    margin: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.filtros button:hover,
+.filtros button.activo {
+    background-color: rgb(20, 60, 60);
+    outline: 2px solid rgb(255, 172, 54);
+}
+
+#listado-libros {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: rgb(250, 252, 187);
+    padding: 20px 30px;
+}
+
+.tarjeta-libro {
+    background-color: rgb(100, 200, 200);
+    border: 2px solid rgb(60, 160, 160);
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #111;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tarjeta-libro span.tipo {
+    font-size: 0.75rem;
+    color: rgb(30, 80, 80);
+    display: block;
+    margin-top: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#contador-resultado {
+    text-align: center;
+    color: rgb(255, 172, 54);
+    font-size: 0.95rem;
+    margin: 8px 0 4px;
 }
 
 footer {
@@ -20,70 +105,6 @@ footer {
     padding: 10px;
 }
 
-/* Distribución: Películas a la izquierda, Contador a la derecha */
-.contenedor-principal {
-    display: flex;
-    gap: 20px;
-    align-items: center; /* Centrado verticalmente en el medio del largo */
-}
-
-.grid-peliculas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
-    flex: 1; /* Toma el espacio de la izquierda */
-}
-
-.lateral-derecho {
-    width: 200px; /* Ancho fijo para la sección del contador */
-    display: flex;
-    justify-content: center;
-}
-
-/* Tarjeta sin animaciones ni transiciones */
-.tarjeta {
-    background-color: rgb(250, 252, 187);
-    padding: 20px;
-    color: #333;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 2px solid transparent;
-    text-align: left; /* Texto a la izquierda */
-}
-
-/* Cambio de color sólido e instantáneo al seleccionar */
-.tarjeta.seleccionado {
-    border: 2px solid rgb(255, 172, 54);
-    background-color: rgb(255, 255, 210);
-}
-
-.tarjeta h2 {
-    font-size: 1.2rem;
-    margin: 0 0 10px 0;
-    color: #000;
-}
-
-.tarjeta h4 {
-    font-size: 0.9rem;
-    font-weight: normal;
-    margin: 5px 0;
-    color: #353535;
-    line-height: 1.4;
-}
-
-/* Caja del contador: Color sólido, sin animaciones */
-#contenedorSelecciones h4 {
-    background-color: rgb(255, 172, 54);
-    color: #000;
-    font-weight: bold;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
+hr {
+    border-color: rgba(255, 255, 255, 0.3);
 }

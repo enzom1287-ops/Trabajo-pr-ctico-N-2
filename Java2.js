@@ -1,57 +1,48 @@
-const Peliculas = [
-    {
-        peli: "Memoir of a murder",
-        datos: "118min   2017   7.2", // Sin barras ni estrellas
-        genero: "Action • Crime • Mystery"
-    },
-    {
-        peli: "No country for old men",
-        datos: "122min   2007   8.2",
-        genero: "Crime • Drama • Thriller"
-    },
-    {
-        peli: "Blade runner 2049",
-        datos: "164min   2017   8.0",
-        genero: "Action • Drama • Sci-Fi"
-    },
-    {
-        peli: "F1 The movie",
-        datos: "156min   2025   7.6",
-        genero: "Action • Drama • Sport"
-    }
+var obras = [
+    { titulo: "JoJo's Bizarre Adventure",      tipo: "manga" },
+    { titulo: "Oyasumi Punpun",                tipo: "manga" },
+    { titulo: "Vagabond",                      tipo: "manga" },
+    { titulo: "Vinland Saga",                  tipo: "manga" },
+    { titulo: "Juego de Tronos",                tipo: "libro" },
+    { titulo: "Una Canción para Lya",           tipo: "libro" },
+    { titulo: "El Regreso de Sherlock Holmes",  tipo: "libro" },
+    { titulo: "La Ilíada y La Odisea",          tipo: "libro" }
 ];
 
-const contenedorTarjetas = document.getElementById("contenedorTarjetas");
-const contenedorSelecciones = document.getElementById("contenedorSelecciones");
-const contadorTexto = document.createElement("h4");
+function renderizar(lista) {
+    var contenedor = document.getElementById('listado-libros');
+    contenedor.innerHTML = '';
 
-// Inicializar el contador en la caja derecha desde el principio
-contenedorSelecciones.appendChild(contadorTexto);
-
-// Generar las cajas dinámicamente
-Peliculas.forEach(item => {
-    const tarjeta = document.createElement("div");
-    tarjeta.classList.add("tarjeta");
-
-    tarjeta.innerHTML = `
-        <h2>${item.peli}</h2>
-        <h4>${item.datos}</h4>
-        <h4><strong>Género:</strong> ${item.genero}</h4>
-    `;
-
-    tarjeta.addEventListener("click", () => {
-        tarjeta.classList.toggle("seleccionado");
-        actualizarContador();
+    lista.forEach(function(obra) {
+        var div = document.createElement('div');
+        div.className = 'tarjeta-libro';
+        div.innerHTML = obra.titulo + '<span class="tipo">' + obra.tipo + '</span>';
+        contenedor.appendChild(div);
     });
 
-    contenedorTarjetas.appendChild(tarjeta);
-});
-
-// Función para actualizar solo el número de manera sólida
-function actualizarContador() {
-    const cantidadSeleccionados = document.querySelectorAll(".tarjeta.seleccionado").length;
-    contadorTexto.textContent = `Seleccionadas: ${cantidadSeleccionados}`;
+    document.getElementById('contador-resultado').textContent =
+        'Mostrando ' + lista.length + ' obra(s)';
 }
 
-// Ejecución inicial para mostrar el cero
-actualizarContador();
+function filtrar(tipo) {
+    document.getElementById('btn-todos').classList.remove('activo');
+    document.getElementById('btn-manga').classList.remove('activo');
+    document.getElementById('btn-libro').classList.remove('activo');
+
+    if (tipo === 'todos') {
+        document.getElementById('btn-todos').classList.add('activo');
+    } else if (tipo === 'manga') {
+        document.getElementById('btn-manga').classList.add('activo');
+    } else {
+        document.getElementById('btn-libro').classList.add('activo');
+    }
+
+    var resultado = (tipo === 'todos')
+        ? obras
+        : obras.filter(function(obra) { return obra.tipo === tipo; });
+
+    renderizar(resultado);
+}
+
+// Carga inicial de elementos en pantalla
+renderizar(obras);
